@@ -19,6 +19,7 @@ function App() {
           <li>MISSION</li>
           <li>GOAL</li>
           <li>CONTACT</li>
+          <li>CONTACT</li>
         </ul>
       </div>
       {/* header--box --END-- */}
