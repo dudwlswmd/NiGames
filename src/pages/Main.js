@@ -9,7 +9,6 @@ import b_logo from '../assets/images/black_logo.png';
 
 function App() {
 
-
   return (
     <div className="main">
       <div className="header--box">
@@ -18,6 +17,7 @@ function App() {
           <li>VISION</li>
           <li>MISSION</li>
           <li>GOAL</li>
+          <li>CONTACT</li>
           <li>CONTACT</li>
         </ul>
       </div>
