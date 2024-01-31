@@ -1,0 +1,130 @@
+
+
+
+
+
+.main{
+  .header--box{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100px;
+    display: flex;
+    justify-content: space-between;
+    .logo{
+      width: 260px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img{
+        object-fit: cover;
+        width: 180px;
+      }
+    }
+    ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding-right: 40px;
+      li{
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }//header--box--END--
+  .body--box{
+    .box--item{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      &.item1{
+        background: url('../assets/images/visualmain.png');
+        background-size: cover;
+        color: #fff;
+      }
+      &.item2{
+        gap: 20px;
+        .gnb--title{
+          font-size: 30px;
+          font-family: encode600;
+        }
+        .title{
+          font-family: Bangers;
+          color: #222;
+          font-size: 80px;
+          font-style: normal;
+          line-height: normal;
+          max-width: 700px;
+          width: 100%;
+          padding: 0 20px;
+          text-align: center;
+        }
+        .sub--text{
+          color: #222;
+          font-size: 24px;
+          line-height: 40px;
+          max-width: 700px;
+          width: 100%;
+          padding: 0 20px;
+          span{
+            display: block;
+            color: #222;
+            font-size: 24px;
+            line-height: 40px;
+
+          }
+        }
+      }
+      .title{
+        font-family: Bangers;
+        color: #F8F8F8;
+        font-size: 80px;
+        font-style: normal;
+        line-height: normal;
+        span{
+          color:#FFED47;
+          font-family: Bangers;
+          font-size: 80px;
+          font-style: normal;
+          line-height: normal;
+        }
+      }//title --END--
+      .sub--title{
+        color:#F8F8F8;
+        font-size: 16px;
+        font-style: normal;
+        line-height: normal;
+        span{
+          font-size: 16px;
+          color: #FFED47;
+        }
+      }
+      .sub--text{
+        color:#F8F8F8;
+        text-align: center;
+        font-size: 16px;
+        max-width: 1250px;
+        line-height: 30px;
+      }
+    }//box--item --END--
+  }//body--box--END--
+}
+
+
+
+
+
+
+
+
+
+
+
+
