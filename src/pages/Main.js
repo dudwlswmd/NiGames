@@ -9,21 +9,69 @@ import b_logo from '../assets/images/black_logo.png';
 
 function App() {
 
+  const containerRef = useRef();
+  const headerRef = useRef(); // header--box에 대한 참조
+  const totalItems = 3; // 총 item의 수
+  let currentIndex = 0; // 현재 활성화된 item의 인덱스
+  let isScrolling = false; // 스크롤 중인지 확인하는 플래그
+
+  const updateHeaderClass = () => {
+    const headerElement = headerRef.current;
+    setTimeout(() => {
+      if (currentIndex > 0) {
+        // item1을 벗어난 경우, 'active' 클래스 추가
+        headerElement.classList.add('active');
+      } else {
+        // item1 내에 있는 경우, 'active' 클래스 제거
+        headerElement.classList.remove('active');
+      }
+    }, 200); 
+  };
+
+  const scrollHandler = (event) => {
+    if (isScrolling) return; // 이미 스크롤 중이면 무시
+    isScrolling = true;
+
+    // 스크롤 방향에 따라 currentIndex 조정
+    if (event.deltaY > 0 && currentIndex < totalItems - 1) {
+      currentIndex++; // 아래로 스크롤
+    } else if (event.deltaY < 0 && currentIndex > 0) {
+      currentIndex--; // 위로 스크롤
+    }
+
+    updateHeaderClass();
+
+    // 해당 섹션으로 스크롤 이동
+    containerRef.current.style.transform = `translateY(-${currentIndex * 100}vh)`;
+
+    // 스크롤 애니메이션 후 isScrolling 리셋
+    setTimeout(() => {
+      isScrolling = false;
+    }, 1000); // 스크롤 애니메이션 시간에 맞춰 조정
+  };
+
+  useEffect(() => {
+    const container = containerRef.current;
+    container.addEventListener('wheel', scrollHandler);
+
+    return () => {
+      container.removeEventListener('wheel', scrollHandler);
+    };
+  }, []);
 
   return (
     <div className="main">
-      <div className="header--box">
-        <div className="logo"><img src={H_logo} alt="logoImg"/></div>
+      <div className="header--box" ref={headerRef}>
+        <div className="logo"></div>
         <ul>
           <li>VISION</li>
           <li>MISSION</li>
           <li>GOAL</li>
           <li>CONTACT</li>
-          <li>CONTACT</li>
         </ul>
       </div>
       {/* header--box --END-- */}
-      <div className="body--box">
+      <div className="body--box" ref={containerRef} style={{ transformStyle: 'preserve-3d', transition: 'transform 1s' }}>
         <div className="box--item item1">
           <div className="title">
             <span>No.1</span> IDIOTS MAKE THE BEST GAMES

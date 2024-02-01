@@ -12,15 +12,36 @@
     height:100px;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
+    transition: 1s;
+    &.active{
+      background: #fff;
+      .logo{
+        &::after{
+          background: url('../assets/images/black_logo.png');
+        }
+      }
+      ul{
+        li{
+          color: #222;
+        }
+      }
+    }
     .logo{
       width: 260px;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      img{
-        object-fit: cover;
-        width: 180px;
+      &::after{
+        content: '';
+        display: block;
+        margin-left: 40px;
+        width: 260px;
+        height: 40px;
+        background: url('../assets/images/white_logo.png');
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
       }
     }
     ul{
