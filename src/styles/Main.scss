@@ -1,9 +1,10 @@
 
 
 
-// body{
-//   overflow: hidden;
-// }
+body{
+  // overflow: hidden;
+  background-color: #F8F8F8;
+}
 
 .main{
   overflow: hidden;
@@ -94,12 +95,182 @@
         background: url('../assets/images/visualmain.png');
         background-size: cover;
         color: #fff;
+        position: relative;
+        overflow: hidden;
+        &::after{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: #222;
+          opacity: 0.5;
+        }
+        video{
+          position: absolute;
+          z-index: 0;
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+        }
+        .sub--title{
+          position: relative;
+          z-index: 1;
+          transition: 0.3s;
+          transform: translate(0,0);
+          opacity: 0;
+          animation: fadeInUp 0.5s ease-out 1.5s forwards;
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+        }
+        .sub--text{
+          position: relative;
+          z-index: 1;
+          transition: 0.3s;
+          transform: translate(0,0);
+          opacity: 0;
+          animation: fadeInUp 0.4s ease-out 2s forwards;
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        }
+        .srrow--img{
+          position: absolute;
+          z-index: 1;
+          bottom:1%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 150px;
+          height: 100px;
+        }
+
+
+
+        .container {
+          position:absolute;
+          bottom:30px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 70px;
+          height: 90px;
+          padding-left: 20px;
+          z-index: 2;
+          cursor: pointer;
+        }
+        
+        .chevron {
+          position: absolute;
+          width: 28px;
+          height: 2px;
+          opacity: 0;
+          transform: scale3d(0.5, 0.5, 0.5);
+          animation: move 3s ease-out infinite;
+        }
+        
+        .chevron:first-child {
+          animation: move 3s ease-out 1s infinite;
+        }
+        
+        .chevron:nth-child(2) {
+          animation: move 3s ease-out 2s infinite;
+        }
+        
+        .chevron:before,
+        .chevron:after {
+          content: ' ';
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 51%;
+          background: #fff;
+        }
+        
+        .chevron:before {
+          left: 0;
+          transform: skew(0deg, 30deg);
+        }
+        
+        .chevron:after {
+          right: 0;
+          width: 50%;
+          transform: skew(0deg, -30deg);
+        }
+        
+        @keyframes move {
+          25% {
+            opacity: 1;
+        
+          }
+          33% {
+            opacity: 1;
+            transform: translateY(30px);
+          }
+          67% {
+            opacity: 1;
+            transform: translateY(40px);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+          }
+        }
+        
+        .text {
+          display: block;
+          margin-top: 75px;
+          margin-left:-30px;
+          font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+          font-size: 12px;
+          color: #fff;
+          text-transform: uppercase;
+          white-space: nowrap;
+          opacity: .25;
+          animation: pulse 2s linear alternate infinite;
+        }
+        
+        @keyframes pulse {
+          to {
+            opacity: 1;
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+
       }
       &.item2{
         gap: 20px;
         .gnb--title{
           font-size: 30px;
           font-family: encode600;
+          div{
+            font-size: 30px;
+            font-family: encode600;
+          }
         }
         .title{
           font-family: Bangers;
@@ -273,18 +444,42 @@
           }
         }//contact--info-list --END--
       }//item6 --END--
+      .typist-container.no-cursor .Typist .Cursor {
+          transition: 0.3s;
+          opacity: 0;
+        }
       .title{
         font-family: Bangers;
         color: #F8F8F8;
         font-size: 80px;
         font-style: normal;
         line-height: normal;
+        position: relative;
+        z-index: 1;
         span{
           color:#FFED47;
           font-family: Bangers;
           font-size: 80px;
           font-style: normal;
           line-height: normal;
+        }
+        .typist-container{
+          display: inline-block;
+          margin-left: 5px;
+        }
+        .Typist {
+          font-size: 80px;
+          font-family: Bangers;
+          color: #F8F8F8;
+          display: inline-block;
+          margin-left: 5px;
+        }
+        p{
+          font-size: 80px;
+          font-family: Bangers;
+          color: #F8F8F8;
+          display: inline-block;
+          margin-left: 5px;
         }
       }//title --END--
       .sub--title{
@@ -308,7 +503,6 @@
   }//body--box--END--
   .footer{
     width: 100%;
-
       background: #222;
       height:240px !important;
 
@@ -328,6 +522,13 @@
           font-size: 14px;
           font-style: normal;
           line-height: 24px; /* 171.429% */
+          span{
+            color:#F8F8F8;
+            font-family:encode500;
+            font-size: 14px;
+            font-style: normal;
+            line-height: 24px; /* 171.429% */
+          }
           &:nth-child(1){
             margin-bottom: 16px;
           }
@@ -458,6 +659,84 @@
   }
 }
 
+
+    .draw {
+        position: relative;
+        
+        padding:3px 20px;
+        margin:2px 0;
+          
+        color:transparent;
+        
+        font-size:32px;
+        font-family: 'Montserrat', sans-serif;
+        
+        
+        &.-small {
+          padding:2px 10px;
+          
+          font-size:14px;
+        }
+        &:before {
+          position: absolute;
+          top:0px;
+          bottom:0px;
+          left:0%;
+          right:100%;
+          
+          background-color:black;
+          
+          content: '';
+        }
+        &.-do {
+          animation:show 1s forwards;
+          &:before {
+              animation:intro 1s ease-in-out;
+          }
+        }
+        
+        //I have added an extra 0.5s on top of document ready because I kept getting it slightly juttering
+        @for $i from 1 through 8 { //Add the class '-wave' to make each line add .25s delay per line
+          &.-wave:nth-child(#{$i}) {
+              &, &::before {
+                animation-delay: #{0.5 + $i/4}s;
+              }
+          }
+        }
+        @for $i from 1 through 30 { //add the attribute 'delay="1"' for a 1 second delay
+          &[delay="#{$i/10}"] {
+              &, &::before {
+                animation-delay: #{0.5 + $i/10}s;
+              }
+          }
+        }
+        
+        @keyframes intro {
+          0% {
+              left:0%;
+              right:100%;
+          }
+          50% {
+              left:0%;
+              right:0%;
+          }
+          100% {
+              left:100%;
+              right:0%;
+          }
+        }
+        @keyframes show {
+          0%, 50% {
+              color:transparent;
+          }
+          50.00001%, 100% {
+              color:black;
+          }
+        }
+    }
+
+
+
 @media (max-width: 600px) {
   .main{
     .body--box{
@@ -559,6 +838,11 @@
     .footer{
       .footer--inner{
         .right--content{
+          .top--text{
+            span{
+              display: block;
+            }
+          }
         }
       }
     } 

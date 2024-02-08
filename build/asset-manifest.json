@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bd1f5e78.css",
+    "main.js": "/static/js/main.c7cc9450.js",
+    "static/js/787.e6611cd6.chunk.js": "/static/js/787.e6611cd6.chunk.js",
+    "static/media/goalBg.png": "/static/media/goalBg.2e5ffded254aaf551941.png",
+    "static/media/visualmain.png": "/static/media/visualmain.ce94effdc3bc47e526b7.png",
+    "static/media/3d-view-puzzle-pieces.png": "/static/media/3d-view-puzzle-pieces.f7f2e5623b4c76129122.png",
+    "static/media/Montserrat600.ttf": "/static/media/Montserrat600.d5e0cc788cba9ced1fb9.ttf",
+    "static/media/Montserrat500.ttf": "/static/media/Montserrat500.c86e3b9010ff63c99166.ttf",
+    "static/media/Montserrat300.ttf": "/static/media/Montserrat300.6fcc9263a21be961d246.ttf",
+    "static/media/Montserrat700.ttf": "/static/media/Montserrat700.2c155811b35513d5beaa.ttf",
+    "static/media/Montserrat400.ttf": "/static/media/Montserrat400.ceb11275ab638627a643.ttf",
+    "static/media/globalmg.png": "/static/media/globalmg.2bad82935115b3b1bd4c.png",
+    "static/media/EncodeSansSemiCondensed-SemiBold.ttf": "/static/media/EncodeSansSemiCondensed-SemiBold.2a4ee59cbbcadd23ed24.ttf",
+    "static/media/EncodeSansSemiCondensed-Medium.ttf": "/static/media/EncodeSansSemiCondensed-Medium.41334bd7321a30056a69.ttf",
+    "static/media/EncodeSansSemiCondensed-Bold.ttf": "/static/media/EncodeSansSemiCondensed-Bold.c496d04a52bd9aea3a2f.ttf",
+    "static/media/Bangers-Regular.ttf": "/static/media/Bangers-Regular.f0f1f39c39ee2df57fd7.ttf",
+    "static/media/ArchivoBlack-Regular.ttf": "/static/media/ArchivoBlack-Regular.e35d38651492de9e7226.ttf",
+    "static/media/arrdown.webp": "/static/media/arrdown.94e1c0720c9cd2d4b51b.webp",
+    "static/media/Tektur-Medium.ttf": "/static/media/Tektur-Medium.d17ae9f20b17d369d3ef.ttf",
+    "static/media/Tektur-SemiBold.ttf": "/static/media/Tektur-SemiBold.53e5aebb850e3e7b95f3.ttf",
+    "static/media/Tektur-Bold.ttf": "/static/media/Tektur-Bold.3ed9bb3ef4053cdf8ac9.ttf",
+    "static/media/Tektur-ExtraBold.ttf": "/static/media/Tektur-ExtraBold.e7cf00a65078f572ad50.ttf",
+    "static/media/Tektur-Regular.ttf": "/static/media/Tektur-Regular.196c5d0a6d6aff42a52d.ttf",
+    "static/media/Tektur-Black.ttf": "/static/media/Tektur-Black.f0bdf12bf1c0f37bfe9e.ttf",
+    "static/media/planetImg.png": "/static/media/planetImg.66174694e9c76e32c09f.png",
+    "static/media/rochetImg.png": "/static/media/rochetImg.6e709e3ebed21fc5a6a3.png",
+    "index.html": "/index.html",
+    "main.bd1f5e78.css.map": "/static/css/main.bd1f5e78.css.map",
+    "main.c7cc9450.js.map": "/static/js/main.c7cc9450.js.map",
+    "787.e6611cd6.chunk.js.map": "/static/js/787.e6611cd6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd1f5e78.css",
+    "static/js/main.c7cc9450.js"
+  ]
+}
